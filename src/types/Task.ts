@@ -2,7 +2,7 @@ type Task = {
   id: number,
   label: string,
   description: string,
-  help?: string,
+  help?: string[],
   weigth: number,
   isCompleted: boolean,
 };
