@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/cddaevent/static/css/main.9e45176c.css",
+    "main.js": "/cddaevent/static/js/main.ee58546b.js",
+    "static/media/nunito-900.woff": "/cddaevent/static/media/nunito-900.37f1740c38600cd3db87.woff",
+    "static/media/nunito-600.woff": "/cddaevent/static/media/nunito-600.c8ac955628cc7c662b4f.woff",
+    "static/media/nunito-800.woff": "/cddaevent/static/media/nunito-800.59bc0f530ffcde17afde.woff",
+    "static/media/nunito-400.woff": "/cddaevent/static/media/nunito-400.7d4bc95464101ce8cc92.woff",
+    "static/media/nunito-300.woff": "/cddaevent/static/media/nunito-300.a5ac1eb0b224db2bf77e.woff",
+    "static/media/nunito-900.woff2": "/cddaevent/static/media/nunito-900.988e5d11e05271caa380.woff2",
+    "static/media/nunito-800.woff2": "/cddaevent/static/media/nunito-800.dd249807c54acf1bbe3b.woff2",
+    "static/media/nunito-600.woff2": "/cddaevent/static/media/nunito-600.41cc0cbd48472384f327.woff2",
+    "static/media/nunito-400.woff2": "/cddaevent/static/media/nunito-400.452ea049a3006104a023.woff2",
+    "static/media/nunito-300.woff2": "/cddaevent/static/media/nunito-300.a3297c068bde0e335d98.woff2",
+    "static/media/edu-nsw-act-foundation-700.woff": "/cddaevent/static/media/edu-nsw-act-foundation-700.db3cae7e6f3a529f0d20.woff",
+    "static/media/edu-nsw-act-foundation-700.woff2": "/cddaevent/static/media/edu-nsw-act-foundation-700.d6321c8ec6089eac671f.woff2",
+    "index.html": "/cddaevent/index.html",
+    "main.9e45176c.css.map": "/cddaevent/static/css/main.9e45176c.css.map",
+    "main.ee58546b.js.map": "/cddaevent/static/js/main.ee58546b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e45176c.css",
+    "static/js/main.ee58546b.js"
+  ]
+}
