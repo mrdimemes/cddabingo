@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cddabingo/static/css/main.533bd450.css",
-    "main.js": "/cddabingo/static/js/main.ee58546b.js",
+    "main.js": "/cddabingo/static/js/main.238ea9e7.js",
     "static/media/nunito-900.woff": "/cddabingo/static/media/nunito-900.37f1740c38600cd3db87.woff",
     "static/media/nunito-600.woff": "/cddabingo/static/media/nunito-600.c8ac955628cc7c662b4f.woff",
     "static/media/nunito-800.woff": "/cddabingo/static/media/nunito-800.59bc0f530ffcde17afde.woff",
@@ -16,10 +16,10 @@
     "static/media/edu-nsw-act-foundation-700.woff2": "/cddabingo/static/media/edu-nsw-act-foundation-700.d6321c8ec6089eac671f.woff2",
     "index.html": "/cddabingo/index.html",
     "main.533bd450.css.map": "/cddabingo/static/css/main.533bd450.css.map",
-    "main.ee58546b.js.map": "/cddabingo/static/js/main.ee58546b.js.map"
+    "main.238ea9e7.js.map": "/cddabingo/static/js/main.238ea9e7.js.map"
   },
   "entrypoints": [
     "static/css/main.533bd450.css",
-    "static/js/main.ee58546b.js"
+    "static/js/main.238ea9e7.js"
   ]
 }
