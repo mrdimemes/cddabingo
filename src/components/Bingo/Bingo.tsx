@@ -1,19 +1,23 @@
 import { useState, useEffect } from "react";
 
+import { TASKS, SIZE, BINGO_BONUS } from "src/bingoConfig";
+
 import styles from "./Bingo.module.sass";
 import { Card } from "./Card";
+import { About } from "./About";
+import { Rules } from "./Rules";
+import { Score } from "./Score";
+import { TaskOverview } from "./TaskOverview";
 
 import type { Task } from "src/types";
 
-import type { Props } from "./types";
 
-
-const Bingo = ({ initialTasks, size, bingoBonus }: Props) => {
-  if (initialTasks.length !== size ** 2) {
+const Bingo = () => {
+  if (TASKS.length !== SIZE ** 2) {
     throw Error("Некорректная размерность поля!");
   };
 
-  const [tasks, setTasks] = useState<Task[]>(initialTasks);
+  const [tasks, setTasks] = useState<Task[]>(TASKS);
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
   const [score, setScore] = useState(0);
 
@@ -23,29 +27,39 @@ const Bingo = ({ initialTasks, size, bingoBonus }: Props) => {
     tasks.forEach(x => {
       if (x.isCompleted) setScore(prevoius => prevoius + x.weigth);
     });
-    for (let i = 0; i < size; i++) {
+    for (let i = 0; i < SIZE; i++) {
       // row bingo bonus
       if (
         tasks
-          .slice(i, i + size)
+          .slice(i, i + SIZE)
           .every(x => x.isCompleted)
       ) {
-        setScore(previous => previous + bingoBonus);
+        setScore(previous => previous + BINGO_BONUS);
       };
       // column bingo bonus
       if (
         tasks
-          .filter((_, index) => index % size === i)
+          .filter((_, index) => index % SIZE === i)
           .every(x => x.isCompleted)
       ) {
-        setScore(previous => previous + bingoBonus);
+        setScore(previous => previous + BINGO_BONUS);
       };
     };
-  }, [tasks, bingoBonus, size]);
+  }, [tasks]);
+
+  const fieldSide = SIZE * 125 - 5;
 
   return (
     <div className={styles.Bingo}>
-      <div className={styles.playfield}>
+      <div
+        className={styles.playfield}
+        style={{
+          minHeight: fieldSide,
+          maxHeight: fieldSide,
+          minWidth: fieldSide,
+          maxWidth: fieldSide,
+        }}
+      >
         {
           tasks.map(task => (
             <Card
@@ -64,28 +78,11 @@ const Bingo = ({ initialTasks, size, bingoBonus }: Props) => {
           ))
         }
       </div>
-      <div>
-        <h1>Заработано очков: {score}</h1>
-        <div>
-          <h2>Правила:</h2>
-          <ul>
-            <li>Первое</li>
-            <li>Второе</li>
-            <li>Третье</li>
-          </ul>
-        </div>
-        <div>
-          {
-            selectedTask === null
-              ? <h2>Нажми на задание, для получания пояснений...</h2>
-              : (
-                <>
-                  <h2>Задача «{selectedTask.label}»</h2>
-                  <div>{selectedTask.help ?? "Ну тут всё и так понятно."}</div>
-                </>
-              )
-          }
-        </div>
+      <div className={styles.side}>
+        <Score score={score} />
+        <About />
+        <Rules />
+        <TaskOverview task={selectedTask} />
       </div>
     </div>
   );
